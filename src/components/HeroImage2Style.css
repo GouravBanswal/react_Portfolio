@@ -1,0 +1,67 @@
+/* HeroImage2Style.css — Premium page header banner */
+.page-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 56px 0 48px;
+}
+
+.page-header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.page-header-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .8125rem;
+  color: var(--text-4);
+  margin-bottom: 8px;
+}
+
+.page-header-breadcrumb a {
+  color: var(--text-4);
+  transition: color var(--t);
+}
+.page-header-breadcrumb a:hover { color: var(--primary); }
+
+.page-header-breadcrumb-sep {
+  font-size: .75rem;
+  color: var(--border-hover);
+}
+
+.page-header-label {
+  font-size: .6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.page-header-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-1);
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.page-header-subtitle {
+  font-size: 1.0625rem;
+  color: var(--text-3);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .page-header { padding: 40px 0 36px; }
+  .page-header-title { font-size: 1.75rem; }
+}

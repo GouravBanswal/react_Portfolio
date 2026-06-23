@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="440" fill="url(#g)"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="88" x2="800" y2="88" stroke="#BFDBFE" stroke-width="1" opacity="0.5"/>
+  <line x1="0" y1="176" x2="800" y2="176" stroke="#BFDBFE" stroke-width="1" opacity="0.5"/>
+  <line x1="0" y1="264" x2="800" y2="264" stroke="#BFDBFE" stroke-width="1" opacity="0.5"/>
+  <line x1="0" y1="352" x2="800" y2="352" stroke="#BFDBFE" stroke-width="1" opacity="0.5"/>
+  <!-- Medical cross icon -->
+  <rect x="352" y="152" width="96" height="32" rx="6" fill="#2563EB" opacity="0.9"/>
+  <rect x="376" y="128" width="48" height="80" rx="6" fill="#2563EB" opacity="0.9"/>
+  <!-- Pulse line -->
+  <polyline points="80,240 180,240 220,160 260,310 300,200 340,240 700,240" stroke="#2563EB" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  <!-- Label -->
+  <text x="400" y="370" font-family="Inter,sans-serif" font-size="22" font-weight="700" fill="#1D4ED8" text-anchor="middle">HealthRx AI</text>
+  <text x="400" y="398" font-family="Inter,sans-serif" font-size="13" fill="#60A5FA" text-anchor="middle">AI / Healthcare Platform</text>
+</svg>

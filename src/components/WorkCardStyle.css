@@ -1,0 +1,240 @@
+/* WorkCardStyle.css — Project case study cards */
+
+/* ── Section wrapper ── */
+.projects-section { background: var(--bg); }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* ── Individual card ── */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--t);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-3px);
+}
+
+/* ── Visual header ── */
+.project-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform var(--t-slow);
+}
+.project-card:hover .project-img-wrap img {
+  transform: scale(1.04);
+}
+.project-category-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
+.project-links-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all var(--t);
+}
+.project-card:hover .project-links-overlay { opacity: 1; transform: translateY(0); }
+
+.project-overlay-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--overlay-btn-bg);
+  border: 1px solid var(--overlay-btn-bdr);
+  border-radius: var(--radius-sm);
+  padding: 7px 12px;
+  font-size: .8125rem;
+  font-weight: 500;
+  color: var(--overlay-btn-clr);
+  text-decoration: none;
+  transition: all 150ms ease;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+.project-overlay-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* ── Card body ── */
+.project-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.project-header { display: flex; flex-direction: column; gap: 8px; }
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-1);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.project-tagline {
+  font-size: .9375rem;
+  color: var(--text-3);
+  line-height: 1.6;
+}
+
+/* Case study rows */
+.project-case-study { display: flex; flex-direction: column; gap: 16px; }
+
+.cs-block { display: flex; flex-direction: column; gap: 6px; }
+
+.cs-label {
+  font-size: .6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--primary);
+}
+
+.cs-text {
+  font-size: .9rem;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+/* Impact metrics */
+.project-impact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.impact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3px;
+}
+
+.impact-metric {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-1);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.impact-label {
+  font-size: .6875rem;
+  font-weight: 500;
+  color: var(--text-4);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  line-height: 1.3;
+}
+
+/* Tech stack */
+.project-tech { display: flex; flex-direction: column; gap: 8px; }
+.project-tech-label {
+  font-size: .6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text-4);
+}
+
+/* Card footer */
+.project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 28px;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.project-footer-links { display: flex; gap: 8px; }
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: .875rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--t);
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-sans);
+}
+.project-link-btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.project-link-btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+.project-link-btn-outline {
+  background: transparent;
+  color: var(--text-2);
+  border: 1px solid var(--border);
+}
+.project-link-btn-outline:hover { border-color: var(--border-hover); background: var(--surface-3); color: var(--text-1); }
+
+/* Featured badge */
+.project-featured-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--amber);
+  background: var(--amber-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* ── Responsive ── */
+@media (min-width: 900px) {
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+  .project-img-wrap { height: 240px; }
+}
+
+@media (max-width: 640px) {
+  .project-impact { grid-template-columns: repeat(2, 1fr); }
+  .project-body { padding: 20px; }
+  .project-footer { padding: 14px 20px; }
+  .impact-metric { font-size: 1.1rem; }
+}
